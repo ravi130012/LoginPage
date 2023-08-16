@@ -8,8 +8,6 @@ customtkinter.set_default_color_theme("green")
 root = customtkinter.CTk()
 
 #credentials
-root_username = "darkstar"
-root_password = "3udwdxx68p"
 
 #configrations
 bg_color = "#2A2A2A"
