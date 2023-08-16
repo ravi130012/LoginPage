@@ -2,9 +2,6 @@ from tkinter import *
 from tkinter import messagebox
 from PIL import Image,ImageTk
 
-#credentials
-root_username = "darkstar"
-root_password = "3udwdxx68p"
 
 #configrations
 bg_color = "#2A2A2A"
@@ -30,19 +27,6 @@ def handle_click(e):
     check_user_input()
 
 
-def check_user_input():
-    password = str(pass_var.get())
-    username = str(user_var.get().lower())
-    # print(f"username = {username}\npassword = {password}")
-
-    if username == root_username and password == root_password:
-        messagebox.showinfo("Welcome","Welcome Darkstar! here is your credeentials")
-        newpg = Toplevel(root)
-        newpg.geometry("800x600+200+50")
-        newpg.mainloop()
-    else:
-        messagebox.showerror("Error","Invalid username or password!")
-        exit()
 #main configrations
 root.config(bg=bg_color)
 root.title("Login")
@@ -86,7 +70,7 @@ pass_en.grid(row=2,column=1,padx=(0,30),pady=(15,15))
 pass_en.bind("<Return>", handle_click)
 
 #button
-log_btn = Button(f,text="Login",font=("sarif 20 bold"), bg=btn_bg_color,fg=btn_fg_color,cursor="hand2",command=check_user_input)
+log_btn = Button(f,text="Login",font=("sarif 20 bold"), bg=btn_bg_color,fg=btn_fg_color,cursor="hand2")
 log_btn.grid(row=3,column=1,pady=(0,70))
 
 #btnconfig
